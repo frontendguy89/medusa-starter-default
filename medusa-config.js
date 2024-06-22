@@ -89,10 +89,6 @@ const plugins = [
   },
   {
     resolve: `medusa-plugin-restock-notification`,
-    options: {
-      trigger_delay, // optional, delay time in milliseconds
-      inventory_required, // minimum inventory quantity to consider a variant as restocked
-    },
   },
 ];
 
