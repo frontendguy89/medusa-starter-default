@@ -74,7 +74,7 @@ const plugins = [
     },
   },
   {
-    resolve: 'medusa-plugin-variant-images',
+    resolve: "medusa-plugin-variant-images",
     options: {
       enableUI: true,
     },
@@ -84,14 +84,7 @@ const plugins = [
     options: {
       api_key: process.env.SENDGRID_API_KEY,
       from: process.env.SENDGRID_FROM,
-      order_placed_template: 
-        process.env.SENDGRID_ORDER_PLACED_ID,
-      localization: {
-        "en-ZA": { // locale key
-          order_placed_template:
-            process.env.SENDGRID_ORDER_PLACED_ID_LOCALIZED,
-        },
-      },
+      order_placed_template: process.env.SENDGRID_ORDER_PLACED_ID,
     },
   },
   {
@@ -101,21 +94,20 @@ const plugins = [
       inventory_required, // minimum inventory quantity to consider a variant as restocked
     },
   },
-
 ];
 
 const modules = {
   eventBus: {
     resolve: "@medusajs/event-bus-redis",
     options: {
-      redisUrl: REDIS_URL
-    }
+      redisUrl: REDIS_URL,
+    },
   },
   cacheService: {
     resolve: "@medusajs/cache-redis",
     options: {
-      redisUrl: REDIS_URL
-    }
+      redisUrl: REDIS_URL,
+    },
   },
 };
 
@@ -127,7 +119,7 @@ const projectConfig = {
   database_url: DATABASE_URL,
   admin_cors: ADMIN_CORS,
   // Uncomment the following lines to enable REDIS
-  redis_url: REDIS_URL
+  redis_url: REDIS_URL,
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule} */
