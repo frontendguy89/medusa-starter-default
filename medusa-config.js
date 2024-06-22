@@ -52,6 +52,56 @@ const plugins = [
       },
     },
   },
+  {
+    resolve: `medusa-plugin-meilisearch`,
+    options: {
+      // config object passed when creating an instance
+      // of the MeiliSearch client
+      config: {
+        host: process.env.MEILISEARCH_HOST,
+        apiKey: process.env.MEILISEARCH_API_KEY,
+      },
+      settings: {
+        // index settings...
+      },
+    },
+  },
+  {
+    resolve: `medusa-payment-paystack`,
+    /** @type {import("medusa-payment-paystack").PluginOptions} */
+    options: {
+      secret_key: process.env.PAYSTACK_SECRET_KEY,
+    },
+  },
+  {
+    resolve: 'medusa-plugin-variant-images',
+    options: {
+      enableUI: true,
+    },
+  },
+  {
+    resolve: `medusa-plugin-sendgrid`,
+    options: {
+      api_key: process.env.SENDGRID_API_KEY,
+      from: process.env.SENDGRID_FROM,
+      order_placed_template: 
+        process.env.SENDGRID_ORDER_PLACED_ID,
+      localization: {
+        "en-ZA": { // locale key
+          order_placed_template:
+            process.env.SENDGRID_ORDER_PLACED_ID_LOCALIZED,
+        },
+      },
+    },
+  },
+  {
+    resolve: `medusa-plugin-restock-notification`,
+    options: {
+      trigger_delay, // optional, delay time in milliseconds
+      inventory_required, // minimum inventory quantity to consider a variant as restocked
+    },
+  },
+
 ];
 
 const modules = {
