@@ -39,8 +39,10 @@ const plugins = [
   {
     resolve: `@medusajs/file-local`,
     options: {
-      backend_url: 'https://ultek-computers-ultek-backend.5uvs3a.easypanel.host/'
-    }
+      upload_dir: "uploads/images",
+      backend_url:
+        "https://ultek-computers-ultek-backend.5uvs3a.easypanel.host/",
+    },
   },
   {
     resolve: "@medusajs/admin",
