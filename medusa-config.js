@@ -91,6 +91,9 @@ const plugins = [
   },
   {
     resolve: `medusa-plugin-restock-notification`,
+    options: {
+      inventory_required,
+    },
   },
 ];
 
