@@ -38,6 +38,9 @@ const plugins = [
   `medusa-payment-manual`,
   {
     resolve: `@medusajs/file-local`,
+    options: {
+      backend_url: 'https://ultek-computers-ultek-backend.5uvs3a.easypanel.host/'
+    }
   },
   {
     resolve: "@medusajs/admin",
