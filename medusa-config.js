@@ -41,7 +41,7 @@ const plugins = [
     options: {
       upload_dir: "uploads/images",
       backend_url:
-        "https://ultek-computers-ultek-backend.5uvs3a.easypanel.host/",
+        "https://ultek-computers-ultek-backend.5uvs3a.easypanel.host:9000",
     },
   },
   {
