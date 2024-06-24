@@ -92,7 +92,8 @@ const plugins = [
   {
     resolve: `medusa-plugin-restock-notification`,
     options: {
-      inventory_required,
+      trigger_delay: "300",
+      inventory_required: '10',
     },
   },
 ];
