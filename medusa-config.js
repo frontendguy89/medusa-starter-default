@@ -72,7 +72,7 @@ const plugins = [
     resolve: `medusa-payment-paystack`,
     /** @type {import("medusa-payment-paystack").PluginOptions} */
     options: {
-      secret_key: "<PAYSTACK_SECRET_KEY>",
+      secret_key: process.env.PAYSTACK_SECRET_KEY,
     },
   },
   {
